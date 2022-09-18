@@ -5,7 +5,7 @@ body {
 }
 
 a { 
-    color:#00abff;
+    color:#0e97db;
     text-decoration:none; 
 }
 
@@ -35,7 +35,7 @@ h2 {
 }
 
 p.date { 
-    color:#ccc;
+    color:rgb(130, 127, 127);
     font-family: georgia, serif;
     font-size: 12px;
     font-style: italic; 
