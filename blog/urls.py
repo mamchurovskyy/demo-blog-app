@@ -11,4 +11,9 @@ urlpatterns = [
         view=views.post_detail_view,
         name="post_detail",
     ),  # SEO-friendly URL
+    path(
+        route="<int:post_id>/share/",
+        view=views.post_share_view,
+        name="post_share",
+    ),
 ]
