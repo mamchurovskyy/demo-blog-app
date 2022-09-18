@@ -1,4 +1,3 @@
-# from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 
 from .models import Post
@@ -13,12 +12,15 @@ def post_list_view(request):
     )
 
 
-def post_detail_view(request, id):
-    # try:
-    #     post = Post.published.get(id=id)
-    # except Post.DoesNotExist:
-    #     raise Http404("The specified post was not found.")
-    post = get_object_or_404(Post, id=id, status=Post.Status.PUBLISHED)
+def post_detail_view(request, year, month, day, post):
+    post = get_object_or_404(
+        Post,
+        status=Post.Status.PUBLISHED,
+        slug=post,
+        published_at__year=year,
+        published_at__month=month,
+        published_at__day=day,
+    )
 
     return render(
         request=request,
