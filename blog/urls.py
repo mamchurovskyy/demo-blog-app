@@ -16,4 +16,9 @@ urlpatterns = [
         view=views.post_share_view,
         name="post_share",
     ),
+    path(
+        route="<int:post_id>/comment/",
+        view=views.post_comment_view,
+        name="post_comment",
+    ),
 ]
