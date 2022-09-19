@@ -33,4 +33,9 @@ urlpatterns = [
         view=LatestPostsFeed(),
         name="post_feed",
     ),
+    path(
+        route="search/",
+        view=views.post_search_view,
+        name="post_search",
+    ),
 ]
